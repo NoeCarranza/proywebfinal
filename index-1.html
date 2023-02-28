@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <!--google-fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway:wght@300;500&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/76f14e999c.js" crossorigin="anonymous"></script>
+  <!--PWA-->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#bbbbbb">
+  <link rel="apple-touch-icon" href="/heart-solid.png">
+  <title>My web </title>
+  <!--favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/balloon-heart.svg">
+
+  <!-- Serviceworker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(registration => {
+            console.log('Service worker registrado con éxito:', registration);
+          })
+          .catch(error => {
+            console.log('Registro de service worker fallido:', error);
+          });
+      });
+    }
+  </script>
+</head>
+
+<body>
+
+  <!--barra de navagacion-->
+  <nav class="navbar navbar-expand-md bg-navbar gb-dark">
+    <div class="container-fluid">
+      <img src="assets/balloon-heart.svg" width="50px" alt="logo de la pagina">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+          <li class="nav-item d-flex justify-content-center align-items-center-">
+            <a class="nav-link active" aria-current="page" href="#sobre-mi">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experiencias">My career</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#diseño">My projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#carousel">My ideas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#makeover">Makeover</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formulario">Contact me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#referencias">My references</a>
+          </li>
+
+      </div>
+    </div>
+  </nav>
+
+  <!--HERO-->
+  <section id="hero" class="container-fluid hero align-items-strech expand-md">
+    <div class=" hero-center" id="inicio">
+      <img id="fotoperfil" src="" class="fotoperfil">
+      <div text-center>
+        <div class="row">
+
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h1 id="nombre"></h1>
+              <h1 id="apellido"></h1>
+
+
+            </div>
+          </div>
+
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h2>Age:</h2>
+              <h2 id="edad"></h2>
+            </div>
+          </div>
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center; ">
+              <i class=""></i>
+              <h2>Phone:</h2>
+              <h2 id="telefono"></h2>
+            </div>
+          </div>
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h2>Cell:</h2>
+              <h2 id="celular"></h2>
+            </div>
+          </div>
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h2>Mail:</h2>
+              <h2 id="mail"></h2>
+            </div>
+          </div>
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h2>Country:</h2>
+              <h2 id="pais"></h2>
+            </div>
+          </div>
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h2>State:</h2>
+              <h2 id="estado"></h2>
+            </div>
+          </div>
+
+
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h2>City:</h2>
+              <h2 id="ciudad"></h2>
+            </div>
+          </div>
+
+          <div class="col-24 col-md-12">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <i class=""></i>
+              <h2>Street:</h2>
+              <h2 id="calle"></h2>
+              <h2 display: flex; justify-content: center;>-</h2>
+              <h2>Num:</h2>
+              <h2 id="numero"></h2>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-imagenes-presentación">
+      <div class="row">
+        <div class="col">
+          <img class="hero-inferior-imagen img-fluid" src="assets/imagen 1.jpg" alt="living estilo 1">
+        </div>
+        <div class="col">
+          <img class="hero-inferior-imagen img-fluid"
+            src="https://i.pinimg.com/564x/20/68/0d/20680d909262616619e3631814eea923.jpg" alt="living estilo 2">
+        </div>
+        <div class="col">
+          <img class="hero-inferior-imagen img-fluid"
+            src="https://i.pinimg.com/564x/36/17/a4/3617a4f7bb6f1b91b11f5ad334fcaee3.jpg">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--sobre mi-->
+  <section id="sobre-mi" class="seccion-clara">
+    <div class="container-sobre-mi">
+      <h1 class="seccion-titulo texto-blanco"> About me</h1>
+      <p class="seccion-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin
+        ullamcorper
+        orci. Sed porta enim quis rutrum finibus. Duis pulvinar elit in volutpat varius. Proin ut orci ut metus
+        commodo
+        congue. Phasellus eu pretium diam, eu mollis turpis. Praesent varius diam maximus convallis vestibulum. Cras
+        et
+        nisl mauris. </p>
+    </div>
+  </section>
+
+  <!--ESTUDIOS-->
+  <section id="experiencias" class="experiencias seccion-media">
+    <div class="container" text-center>
+      <div class="row">
+        <!--estudios 1-->
+        <div class="columna col-12 col-md-4">
+          <div class="iconos">
+            <i class="bi bi-bookmark-star"></i>
+          </div>
+          <p class="experiencia-titulo"> Associate Degree </p>
+          <ul class="experiencia-texto">
+            <li class="lista-desordenada">Nunc at mauris sodales, ornare nunc sed, interdum est. Donec ligula arcu,
+              lacinia
+              non nisi sed, scelerisque sollicitudin elit.</li>
+            <li class="lista-desordenada">Donec vel lacinia metus. Vivamus varius et velit et
+              blandit.</li>
+            <li class="lista-desordenada">Praesent at vehicula justo.</li>
+          </ul>
+          <div class="badges-contenedor">
+            <span class="badge rounded-pill text-bg-secondary">Design</span>
+            <span class="badge rounded-pill text-bg-secondary">Draw</span>
+          </div>
+        </div>
+        <!--estudios 2-->
+        <div class="columna col-12 col-md-4">
+          <div class="iconos">
+            <i class="bi bi-bookmark-star"></i>
+          </div>
+          <p class="experiencia-titulo"> Bachelor Degree</p>
+          <ul class="experiencia-texto">
+            <li class="lista-desordenada">Curabitur fringilla libero quis nulla aliquet, quis malesuada felis
+              tincidunt.</li>
+            <li class="lista-desordenada"> Duis rhoncus lorem nibh, ut elementum augue
+              iaculis quis. Ut vulputate eu leo eget rhoncus. Mauris interdum rutrum ante nec lobortis.</li>
+          </ul>
+          <div class="badges-contenedor">
+            <span class="badge rounded-pill text-bg-secondary">Decoration</span>
+            <span class="badge rounded-pill text-bg-secondary">Paints</span>
+            <span class="badge rounded-pill text-bg-secondary">Remodeling</span>
+          </div>
+        </div>
+        <!--estudios 3-->
+        <div class="columna col-12 col-md-4">
+          <div class="iconos">
+            <i class="bi bi-bookmark-star"></i>
+          </div>
+          <p class="experiencia-titulo">Masters Degree</p>
+          <ul class="experiencia-texto">
+            <li class="lista-desordenada"> Nullam et nunc ut erat
+              ultricies congue sit amet eget felis. Vivamus maximus magna et magna blandit.</li>
+            <li class="lista-desordenada">Nullam dignissim dui elit, in egestas leo mollis non. Pellentesque habitant
+              morbi tristique senectus. </li>
+            <li class="lista-desordenada">Praesent at vehicula justo.</li>
+          </ul>
+          <div class="badges-contenedor">
+            <span class="badge rounded-pill text-bg-secondary">Objets</span>
+            <span class="badge rounded-pill text-bg-secondary">Furniture</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--Diseño de Interiores-->
+  <section id="diseño" class="seccion-obscura">
+    <div class="container" text-center>
+      <div class="row">
+        <!--Diseño 1-->
+        <div class="col-12 col-md-6">
+          <p class="diseño-titulo"> Remodeling project 1 </p>
+          <p class="diseño-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis pretium
+            elit,
+            sit amet ornare ligula tempus vel.</p>
+          <img class="imagenes" src="https://i.pinimg.com/564x/18/dd/3a/18dd3a42b1f649922e92b145f6e964ee.jpg"
+            art="diseño de habitación" width="300" height="400">
+        </div>
+        <!--Diseño 2-->
+        <div class="col-12 col-md-6">
+          <p class="diseño-titulo"> Remodeling project 2</p>
+          <p class="diseño-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis pretium
+            elit,
+            sit amet ornare ligula tempus vel.</p>
+          <img class="imagenes" src="https://i.pinimg.com/564x/18/1e/6b/181e6b867b3e9aace2355f24918dc876.jpg"
+            art="diseño de habitación" width="300" height="400">
+        </div>
+      </div>
+      <button id="boton" type="button" class="btn boton-ver"
+        onclick="window.open('https://marketbymodernnest.com/collections/found')" id="tienda">View more</button>
+
+
+      <button type="button" class="btn btn-danger boton-descuento" id="liveToastBtn">Get a discount!</button>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <i class="fa-solid fa-tags"></i>
+            <strong class="me-auto"> Duis id tortor. </strong>
+
+            <small class="time">1 mins ago</small>
+
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            20% Quisque ac leo risus.
+          </div>
+          <div>
+            <img src="https://i.pinimg.com/564x/be/a6/c4/bea6c465c407a1189a8fb20a3784eaf1.jpg" class="img-toast">
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!--CAROUSEL-->
+  <div class="con-carousel">
+    <section id="carousel" class="carousel">
+      <div class="container" text-center>
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://i.pinimg.com/564x/9c/e2/51/9ce251ae91edd2c679b07f0c8bac21b1.jpg" class="d-block w-100"
+                alt="image living remodeled">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Kitchen corner remodeling</h5>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img src="https://i.pinimg.com/564x/ad/78/e7/ad78e7b765c9c34be85c1ea084784d68.jpg" class="d-block w-100"
+                alt="remodeled kitchen image">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Kitchen remodeling</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc.</p>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img src="https://i.pinimg.com/564x/ce/53/38/ce533848c603f09a73f9b7df79ab428d.jpg" class="d-block w-100"
+                alt="remodeled yard image">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Yard remodeling</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <!--video-->
+  <section id="video-makeover" class="container-fluid video-remodelacion">
+    <div id="makeover" class="row ">
+      <h1 class="seccion-titulo"> Makeover Kitchen</h1>
+      <iframe class="col-12" width="900" height="555" src="https://www.youtube.com/embed/qG4MekXGDCM"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+
+
+
+
+  <!--Formulario-->
+  <form class="formulario" id="formulario">
+    <h2 class="title">Contact me!</h2>
+    <div class="form_container">
+      <!--NOMBRE -->
+      <div class="formulario-input" id="grupo-nombre">
+        <label for="nombre" class="formulario__label"></label>
+        <div class="formulario-grupo-input">
+          <input type="text" class="form_input" placeholder="Name" name="nombre">
+          <i class="formulario-validacion-estado fa-solid fa-rectangle-xmark"></i>
+          <p class="formulario-input-error">The name must contain a minimum of 4 digits and can only contain letters.
+          </p>
+        </div>
+      </div>
+      <!--EMAIL-->
+      <div class="formulario-input" id="grupo-mail">
+        <div class="formulario-grupo-input">
+          <label for="email" class="formulario__label"></label>
+          <input type="email" class="form_input" placeholder="your@email.com" name="mail">
+          <i class="formulario-validacion-estado fa-solid fa-rectangle-xmark"></i>
+          <p class="formulario-input-error">The e-mail can only contain letters, numbers, periods and hyphens.</p>
+        </div>
+      </div>
+      <!--TELEFONO-->
+      <div class="formulario-input" id="grupo-telefono">
+        <label for=" telefono" class="formulario__label"></label>
+        <div class="formulario-grupo-input">
+          <input type="Phone" class="form_input" placeholder="xxx-xxxx" name="telefono">
+          <i class="formulario-validacion-estado fa-solid fa-rectangle-xmark"></i>
+          <p class="formulario-input-error">The number must contain numbers and the maximum is 14 digits. </p>
+        </div>
+      </div>
+      <!--MENSAJE-->
+      <div class="formulario-input" id="grupo-mensaje">
+        <label for="mensaje" class="formulario__label"></label>
+        <div class="formulario-grupo-input">
+          <textarea class="form_input form_input--mensaje" placeholder="Your message:" name="mensaje"></textarea>
+          <i class="formulario-validacion-estado fa-solid fa-rectangle-xmark"></i>
+          <p class="formulario-input-error">The message must contain a minimum of 16 digits and can only contain letters
+            and numbers. letters and numbers.</p>
+        </div>
+      </div>
+
+      <!--BOTON ENVIAR-->
+      <div class="formulario-input formulario-input-grupo-btn-enviar">
+        <button type="submit" value="Send" class="form__btn">Send</button>
+      </div>
+    </div>
+    </div>
+
+  </form>
+
+
+  <!--REFERENCIAS-->
+
+  <div id="referencias" class="seccion-referencias container-fluid">
+    <div class="referencias-titulo">
+      <h1>Reference contacts</h1>
+    </div>
+    <div text-center class="container-referencias">
+      <div class="row">
+        <div class="columna col-lg-3 col-md-3 col-sm-6">
+          <!--Referencia-->
+          <div style="display: flex">
+            <i class="bi bi-file-person"></i>
+            <p class="Referencia-1">Erika Martin</p>
+          </div>
+          <div style="display: flex ">
+            <i class="bi bi-phone"></i>
+            <p>(+54)346-785324</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-envelope-open-heart"></i>
+            <p> Erika@martin.com</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-instagram"></i>
+            <p> Erica-MartinOk</p>
+          </div>
+        </div>
+        <div class="columna col-lg-3 col-md-3 col-sm-6">
+
+          <div style="display: flex">
+            <i class="bi bi-file-person"></i>
+            <p class="Referencia-1">Tim Bennett</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-phone"></i>
+            <p>0477-528-443</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-envelope-open-heart"></i>
+            <p> Tim.bennett@example.com</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-instagram"></i>
+            <p> Tim.bennett</p>
+          </div>
+        </div>
+        <div class=" columna col-lg-3 col-md-3 col-sm-6">
+
+          <div style="display: flex">
+            <i class="bi bi-file-person"></i>
+            <p class="Referencia-1">Katrina Frazier</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-phone"></i>
+            <p>0487-392-997</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-envelope-open-heart"></i>
+            <p> Katrina.frazier@example.com</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-instagram"></i>
+            <p> Katrina.frazier</p>
+          </div>
+        </div>
+        <div class="columna col-lg-3 col-md-3 col-sm-6">
+          <div style="display: flex">
+            <i class="bi bi-file-person"></i>
+            <p class="Referencia-1">Madhavi Heerema</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-phone"></i>
+            <p>"(06) 94363582"</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-envelope-open-heart"></i>
+            <p> Madhavi.heerema@example.com</p>
+          </div>
+          <div style="display: flex">
+            <i class="bi bi-instagram"></i>
+            <p> Madhavi-heerema</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--DROPDOWN-->
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      Menu
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+      <li><a class="dropdown-item" href="#sobre-mi">Know me</a></li>
+      <li><a class="dropdown-item" href="#experiencias">My Carrer</a></li>
+      <li><a class="dropdown-item" href="#diseño">My proyects</a></li>
+      <li><a class="dropdown-item" href="#carousel">My ideas</a></li>
+      <li><a class="dropdown-item" href="#makeover">Makeover</a></li>
+      <li><a class="dropdown-item" href="#formulario">Contact me</a></li>
+      <li><a class="dropdown-item" href="#referencias">My references</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="#inicio">Back to Top</a></li>
+    </ul>
+  </div>
+
+
+  <!--Pie de página (Footer)-->
+  <footer class="seccion-obscura d-flex flex-column align-items-center justify-content-center">
+    <i class="bi bi-balloon-heart"></i>
+    <p class="footer-texto text-center">The best style for your hos. <br> Design and comfort.</p>
+    <div class="icono-redes d-flex flex-wrap align-items-center justify-content-center">
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+    <div class="derechos-de-autor">Created by Noelia Carranza (2023) &#169 </div>
+  </footer>
+
+
+  <!--AVISO COOKIES-->
+  <div id="avisocookies" class="aviso-cookies">
+    <img src="assets/cookie.svg" alt="galleta" class="galleta">
+    <h3 class="titulo-cookies">Cookies</h3>
+    <p class="parrafo-cookies"></p>
+    <p>This website uses cookies to anonymously and statistically analyze the use you make of the website, improve the
+      content and your browsing experience..</p>
+    <button class="botton-cookies" id="btnaceptarcookies">I agree</button>
+    <a class="enlace-aviso-cookies" href="aviso-cookies.html">Terms and conditions of cookies</a>
+  </div>
+  <div id="fondoavisocookies" class="fondo-aviso-cookies">
+
+  </div>
+  <!---->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="formulario.js"> </script>
+  <script type="text/javascript" src="toast.js"> </script>
+  <script type="text/javascript" src="aviso-cookies.js"></script>
+  <script type="text/javascript" src="/sw.js"></script>
+</body>
+
+</html>

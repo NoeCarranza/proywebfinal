@@ -1,0 +1,670 @@
+.navbar {
+  padding: 10px;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Quicksand", sans-serif;
+  font-size: 17px;
+}
+
+/*ESTILOS GENERALES**/
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+/*HERO**/
+
+.hero {
+  background-color: rgb(2, 32, 46);
+  min-height: 450px;
+  text-align: center;
+  border: 40px;
+  align-items: center;
+  padding: 3rem;
+  margin: auto;
+}
+.hero-center h1 {
+  font-size: 2.5rem;
+  align-items: center;
+  color: antiquewhite;
+  font-family: "Yeseva One", cursive;
+  border: 20px;
+  text-align: center;
+  margin: 5px;
+}
+
+.hero-center h2 {
+  font-size: 1rem;
+  color: rgb(243, 242, 242);
+  font-family: "Montserrat", sans-serif;
+  border: 20px;
+  text-align: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.fotoperfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.boton-ver {
+  font-size: 15px;
+  margin: 10px;
+  font-family: "Quicksand", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(221, 221, 221);
+  border: 10px;
+}
+
+.sobre-mi {
+  text-align: center;
+  color: rgb(2, 32, 46);
+  border: 15px;
+  padding: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.2rem;
+}
+
+.seccion-obscura {
+  background-color: rgb(2, 32, 46);
+  text-align: center;
+  border: 10px;
+  padding: 20px;
+  color: rgb(221, 221, 221);
+}
+.imagenes-presentación {
+  width: 60%;
+}
+.seccion-clara {
+  background-color: rgb(221, 221, 221);
+  text-align: center;
+  color: rgb(2, 32, 46);
+  border: 20px;
+  padding: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.seccion-media {
+  background-color: rgb(187, 187, 187);
+  text-align: center;
+  border: 20px;
+  color: rgb(2, 32, 46);
+  border: 10px;
+  padding: 70px;
+}
+.seccion-titulo {
+  font-family: "Yeseva One", cursive;
+  padding: 10px;
+  text-align: center;
+  font-size: 60px;
+}
+.seccion-texto {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  border: 10px;
+  padding: 60px;
+}
+
+.boton-descuento {
+  text-align: center;
+  border: 20px;
+  color: rgb(2, 32, 46);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.toast-container {
+  display: block;
+}
+.img-toast {
+  display: block;
+  height: 50%;
+  width: 50%;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+}
+
+.me-auto {
+  font-family: bold "Montserrat", sans-serif;
+  display: flex;
+  color: #bb2929;
+}
+.time {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  display: block;
+  color: black;
+}
+.toast-body {
+  font-weight: bold;
+  display: block;
+  color: #304352;
+  font-weight: bold;
+  border: 2px;
+  font-family: "Yeseva One", cursive;
+  font-size: 20px;
+}
+/*EXPERIENCIA**/
+.experiencias {
+  padding: 40px 40px 60px 40px;
+  color: black;
+  border: 20px;
+  display: block;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.experiencia .row div {
+  padding: 10px;
+  border: 10px;
+  color: rgb(221, 221, 221);
+  align-items: stretch;
+  height: 250px;
+}
+.experiencia-titulo {
+  font-size: 25px;
+  font-family: "Yeseva One", cursive;
+  color: black;
+  display: center;
+  margin: 10px 0;
+}
+
+.experiencia-texto {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  color: rgb(2, 32, 46);
+}
+
+.iconos i {
+  font-size: 2rem;
+  color: #e2ebf0;
+  background-color: rgb(2, 32, 46);
+  padding: 8px 19px;
+  border-radius: 60%;
+}
+
+.badges-contenedor {
+  font-size: 25px;
+  font-weight: bold;
+}
+.badge {
+  margin: 5px;
+}
+
+.experiencias .columna {
+  padding: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px;
+  transition: all 0.2s ease-in;
+}
+.experiencias .columna:hover {
+  background-color: #29323c2a;
+}
+.lista-desordenada {
+  list-style: none;
+}
+.lista-desordenada::before {
+  content: "❤";
+  color: rgb(2, 32, 46);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+/* DISEÑO**/
+
+.diseño-titulo {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px;
+  font-family: "Yeseva One", cursive;
+  color: rgb(221, 221, 221);
+}
+.diseño-texto {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+}
+.imagenes {
+  margin: auto;
+}
+
+/*REFERENCIAS**/
+
+.seccion-referencias {
+  background-color: rgb(221, 221, 221);
+  font-family: "Quicksand", sans-serif;
+  font-size: 0,5rem;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.container-referencias {
+  text-align: center;
+  color: rgb(2, 32, 46);
+  padding-block: 50px;
+  border: #304352 solid 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 20px;
+  transition: all 0.2s ease-in;
+}
+
+.container-referencias .columna:hover {
+  background-color: #29323c;
+  color: #e2ebf0;
+  border: 3px solid #29323c;
+  border-radius: 10px;
+}
+
+.referencias-titulo {
+  font-family: "Yeseva One", cursive;
+  font-size: 20px;
+  color: rgb(2, 32, 46);
+  border: 40px;
+  text-align: center;
+  padding-block: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.bi-file-person {
+  font-size: 15x;
+  color: black;
+  border-radius: 50%;
+  padding-right: 5px;
+}
+
+.bi-phone {
+  font-size: 15px;
+  color: black;
+  border-radius: 50%;
+  padding-right: 5px;
+}
+.bi-envelope-open-heart {
+  font-size: 15px;
+  color: black;
+  border-radius: 50%;
+  padding-right: 5px;
+}
+.bi-instagram {
+  font-size: 15px;
+  color: black;
+  border-radius: 50%;
+  padding-right: 5px;
+}
+
+/*CARRUSEL**/
+.con-carousel {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+.carousel-inner {
+  font-family: "Quicksand", sans-serif;
+  justify-content: center;
+  padding: 10px;
+  margin: auto;
+  align-items: center;
+  width: 40%;
+}
+
+/*VIDEO YOUTUBE**/
+.video-remodelacion {
+  color: rgb(221, 221, 221);
+  background-color: rgb(2, 32, 46);
+  text-align: center;
+  border-color: 30px rgb(2, 32, 46);
+  padding: 30px;
+}
+
+/*FORMULARIO**/
+
+.formulario {
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+  padding: 40px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-family: "Yeseva One", cursive;
+  font-size: 2.5rem;
+  color: rgb(2, 32, 46);
+  text-align: center;
+  padding: 10px;
+}
+
+.form_container {
+  font-family: "Quicksand", sans-serif;
+  background-color: rgba(255, 255, 255, 0.404);
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.formulario__label {
+  display: block;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form_input {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  transition: 0.3s ease all;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+.form_input:focus {
+  border: 3px solid rgb(2, 32, 46);
+  outline: none;
+  box-shadow: 3px 0px 30px rgb(255, 255, 255 0.4);
+}
+
+.formulario-input-error {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+  display: none;
+  margin-bottom: 0;
+}
+
+.formulario-input-error-activo {
+  display: block;
+}
+
+.formulario-input {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.form_input--mensaje {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  height: 70px;
+}
+
+.formulario-grupo-input {
+  justify-content: center;
+}
+
+.formulario-validacion-estado {
+  font-size: 1.5rem;
+  z-index: 100;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: center;
+  position: absolute;
+  right: 28%;
+  margin: 2px;
+  visibility: hidden;
+}
+
+.formulario-validacion-estado-mensaje {
+  font-size: 1.5rem;
+  z-index: 100;
+  opacity: 1;
+  position: absolute;
+  right: 28%;
+  margin-top: 13px;
+  padding: 2px;
+  visibility: hidden;
+}
+
+.formulario-mensaje-error {
+  visibility: hidden;
+  justify-content: center;
+  gap: 10px;
+  font-size: 25px;
+  background-color: #304352;
+  border-radius: 5px;
+  color: #d7d2cc;
+  height: 45px;
+  text-align: center;
+  width: 700px;
+  align-items: center;
+  margin-left: 370px;
+}
+
+.form__btn {
+  width: 20%;
+  font-size: 1rem;
+  background-color: rgb(2, 32, 46);
+  color: #d7d2cc;
+  border-radius: 10px;
+
+  height: 40px;
+  cursor: pointer;
+}
+
+.form__btn:hover {
+  box-shadow: 3px 0px 30px rgb(99, 99, 99, 2);
+}
+
+.formulario-mensaje-exito {
+  visibility: hidden;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.formulario-mensaje-exito-activo {
+  display: flex;
+}
+/*ESTILOS DE VALIDACION DE FORMULARIO**/
+
+.formulario-input-correcto .formulario-validacion-estado {
+  color: rgb(35, 189, 4);
+}
+
+
+.formulario-input-incorrecto .formulario-validacion-estado {
+  color: #bb2929;
+}
+
+.formulario-input-incorrecto .formulario-validacion-estado-mensaje {
+  color: #bb2929;
+}
+
+.formulario-input-incorrecto .form_input {
+  border: 3px solid #bb2929;
+}
+
+/* BOTON REGRESAR**/
+.dropdown {
+  font-size: 40px;
+  padding: 30px;
+  font-family: "Quicksand", sans-serif;
+  background-color: rgb(2, 32, 46);
+  display: grid;
+  place-content: center;
+}
+.dropdown-toggle {
+  font-size: 22px;
+}
+
+/*footer**/
+footer {
+  min-height: 500px;
+}
+
+.bi-balloon-heart {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  font-size: 80px;
+  text-align: center;
+}
+
+.footer-texto {
+  font-size: 25px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.icono-redes a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  margin: 10px;
+  border: 3px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.icono-redes i {
+  color: white;
+  font-size: 30px;
+  transition: 0.2s ease-in;
+}
+
+.icono-redes a:hover {
+  background-color: white;
+  border: 3px solid rgb(2, 32, 46);
+}
+.icono-redes a:hover i {
+  color: rgb(2, 32, 46);
+}
+
+.derechos-de-autor {
+  font-size: 15px;
+  color: rgb(187, 187, 187);
+  padding: 20px;
+}
+
+
+/*AVISO COOKIES**/
+.aviso-cookies{
+  display:none;
+  background-color: #cfd9df;
+  padding: 20px;
+  width: calc( 100% - 40px);
+  max-width: 300px;
+  line-height: 150%;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  padding-top: 60px;
+  box-shadow: 0 2px 20px 10px rgba(222,222,222,.25);
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.aviso-cookies.activo{
+  display:block;
+}
+
+.aviso-cookies .galleta{
+  max-width: 100px;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.aviso-cookies .titulo-cookies {
+margin-bottom: 15px;
+}
+
+.aviso-cookies  .parrafo-cookies{
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.aviso-cookies .botton-cookies{
+  width: 100%;
+  background-color: #004617;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:  .3s ease all;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.aviso-cookies .botton-cookies:hover{
+  background-color: #000;
+}
+
+.aviso-cookies .enlace-aviso-cookies{
+  color: #2c6586;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.aviso-cookies .enlace-aviso-cookies:hover{
+text-decoration: underline;
+}
+
+.fondo-aviso-cookies{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.671);
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.fondo-aviso-cookies.activo{
+display: block;
+}
+/* ADAPTABLE RESPONSIVO**/
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-inferior-imagen {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .carousel-inner {
+    height: 120px;
+    width: 120px;
+  }
+  .carousel-caption {
+    font-size: 18px;
+  }
+}

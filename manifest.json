@@ -1,0 +1,13 @@
+{
+    "name": "Mi Proyecto CV",
+    "short_name": "Mi CV",
+    "start_url": "/?home=true",
+    "icons": 
+    [{"src": "./heart-solid.png",
+    "sizes": "144x144",
+    "type": "image/png"}],
+    "background-color":"#05354b",
+    "theme_color": "#bbbbbb",
+    "display": "standalone",
+    "orientation": "portrait"
+}
